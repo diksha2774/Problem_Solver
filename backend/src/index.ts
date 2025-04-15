@@ -4,13 +4,13 @@ const cors = require('cors');
 const {connectDB} = require('./config/configuration');
 import userrouter from './routes/user';
 import problemrouter from './routes/problem';
-import auth from './middleware/auth';
 connectDB();
 
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({    origin: '*', 
+  }));
 
 
 app.use("/api/user",userrouter);
