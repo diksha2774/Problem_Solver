@@ -4,6 +4,8 @@ import axios from 'axios';
 import '../styles/global.css';
 import '../styles/Evaluate_code.css';
 
+const apiUrl = import.meta.env.VITE_BACKEND_URL;
+
 export default function Evaluate_code() {
     const location = useLocation();
     const navigate = useNavigate();
@@ -44,7 +46,7 @@ export default function Evaluate_code() {
             }
 
             const response = await axios.post(
-                "http://localhost:3000/api/problem/Evaluate_code",
+                `${apiUrl}/api/problem/Evaluate_code`,
                 {
                     title: problemTitle,
                     code: code,

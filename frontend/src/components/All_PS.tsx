@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/global.css';
 
+const apiUrl = import.meta.env.VITE_BACKEND_URL;
 interface Problem {
     id: number;
     title: string;
@@ -33,7 +34,7 @@ export default function All_PS() {
                     return;
                 }
 
-                const response = await axios.get("http://localhost:3000/api/problem/all_PS", {
+                const response = await axios.get(`${apiUrl}/api/problem/all_PS`, {
                     headers: {
                         "Authorization": token
                     }

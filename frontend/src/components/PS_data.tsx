@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/global.css';
 
+const apiUrl = import.meta.env.VITE_BACKEND_URL;
 export default function PS_data() {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
@@ -51,7 +52,7 @@ export default function PS_data() {
             }
 
             await axios.post(
-                "http://localhost:3000/api/problem/PS_data",
+                `${apiUrl}/api/problem/PS_data`,
                 {
                     title: formData.title,
                     description: formData.description,

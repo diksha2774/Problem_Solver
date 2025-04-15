@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/global.css';
 
+const apiUrl = import.meta.env.VITE_BACKEND_URL;
 export default function Signin() {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ export default function Signin() {
         setIsLoading(true);
 
         try {
-            const response = await axios.post("http://localhost:3000/api/user/signin", 
+            const response = await axios.post(`${apiUrl}/api/user/signin`, 
                 formData,
                 { headers: { "Content-Type": "application/json" } }
             );
