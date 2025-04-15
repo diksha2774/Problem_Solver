@@ -1,0 +1,66 @@
+/* body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3e7eb; /* Softer background for a cleaner look */
+    /* margin: 0;
+    font-family: 'Poppins', sans-serif;  */
+/* } */ */
+
+.formdata {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; 
+    border: none;
+    border-radius: 16px; /* More rounded corners for a smoother look */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Deeper and softer shadow */
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 380px; /* Slightly wider for better spacing */
+}
+
+h1 {
+    margin-bottom: 25px;
+    color: #4a90e2;
+    font-weight: 600; /* Bolder heading for better visibility */
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #f9fafb; /* Softer input background */
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #4a90e2;
+    background-color: #ffffff; /* Brighter background on focus */
+    box-shadow: 0 0 6px rgba(74, 144, 226, 0.5);
+}
+
+button {
+    width: 100%;
+    background-color: #4a90e2;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #357ab8;
+    transform: scale(1.05); 
+}
+
+button:active {
+    transform: scale(0.98); 
+}
